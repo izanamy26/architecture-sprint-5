@@ -1,0 +1,247 @@
+2025-03-12 11:53:11,301 - rasa.cli.utils - DEBUG - Parameter 'credentials' not set. Using default location 'credentials.yml' instead.
+2025-03-12 11:53:12,698 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-12 11:53:12,698 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-12 11:53:12,698 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-12 11:53:12,698 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-12 11:53:12,971 - jax._src.path - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2025-03-12 11:53:13,728 - rasa.core.utils - DEBUG - Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2025-03-12 11:53:13,729 - root - INFO - Starting Rasa server on http://0.0.0.0:5005
+2025-03-12 11:53:13,729 - rasa.core.utils - DEBUG - Using the default number of Sanic workers (1).
+2025-03-12 11:53:13,937 - rasa.telemetry - DEBUG - Skipping telemetry reporting: no license hash found.
+2025-03-12 11:53:13,962 - rasa.core.tracker_store - DEBUG - Connected to InMemoryTrackerStore.
+2025-03-12 11:53:13,962 - rasa.core.lock_store - DEBUG - Connected to lock store 'InMemoryLockStore'.
+2025-03-12 11:53:13,962 - rasa.core.nlg.generator - DEBUG - Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2025-03-12 11:53:13,962 - rasa.core.processor - INFO - Loading model models/20250312-112726-warm-buck.tar.gz...
+2025-03-12 11:53:14,128 - rasa.engine.storage.local_model_storage - DEBUG - Extracted model to '/var/folders/pc/dyv9zq6936jbxq9bdpfwj6fw0000gn/T/tmp9ovj0brf'.
+2025-03-12 11:53:14,130 - rasa.engine.graph - DEBUG - Node 'nlu_message_converter' loading 'NLUMessageConverter.load' and kwargs: '{}'.
+2025-03-12 11:53:14,130 - rasa.engine.graph - DEBUG - Node 'run_WhitespaceTokenizer0' loading 'WhitespaceTokenizer.load' and kwargs: '{}'.
+2025-03-12 11:53:14,131 - rasa.engine.graph - DEBUG - Node 'run_RegexFeaturizer1' loading 'RegexFeaturizer.load' and kwargs: '{}'.
+2025-03-12 11:53:14,131 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_RegexFeaturizer1' was requested for reading.
+2025-03-12 11:53:14,131 - rasa.engine.graph - DEBUG - Node 'run_LexicalSyntacticFeaturizer2' loading 'LexicalSyntacticFeaturizer.load' and kwargs: '{}'.
+2025-03-12 11:53:14,131 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_LexicalSyntacticFeaturizer2' was requested for reading.
+2025-03-12 11:53:14,132 - rasa.engine.graph - DEBUG - Node 'run_CountVectorsFeaturizer3' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2025-03-12 11:53:14,132 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_CountVectorsFeaturizer3' was requested for reading.
+2025-03-12 11:53:14,132 - rasa.engine.graph - DEBUG - Node 'run_CountVectorsFeaturizer4' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2025-03-12 11:53:14,132 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_CountVectorsFeaturizer4' was requested for reading.
+2025-03-12 11:53:14,132 - rasa.engine.graph - DEBUG - Node 'run_DIETClassifier5' loading 'DIETClassifier.load' and kwargs: '{}'.
+2025-03-12 11:53:14,132 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_DIETClassifier5' was requested for reading.
+2025-03-12 11:53:14,133 - rasa.utils.tensorflow.models - DEBUG - Loading the model from /var/folders/pc/dyv9zq6936jbxq9bdpfwj6fw0000gn/T/tmpsk8l8bvx/train_DIETClassifier5/DIETClassifier.tf_model with finetune_mode=False...
+2025-03-12 11:53:14,149 - rasa.nlu.classifiers.diet_classifier - DEBUG - You specified 'DIET' to train entities, but no entities are present in the training data. Skipping training of entities.
+2025-03-12 11:53:14,160 - rasa.nlu.classifiers.diet_classifier - DEBUG - Following metrics will be logged during training: 
+2025-03-12 11:53:14,160 - rasa.nlu.classifiers.diet_classifier - DEBUG -   t_loss (total loss)
+2025-03-12 11:53:14,160 - rasa.nlu.classifiers.diet_classifier - DEBUG -   i_acc (intent acc)
+2025-03-12 11:53:14,160 - rasa.nlu.classifiers.diet_classifier - DEBUG -   i_loss (intent loss)
+2025-03-12 11:53:14,249 - absl - WARNING - At this time, the v2.11+ optimizer `tf.keras.optimizers.Adam` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.Adam`.
+2025-03-12 11:53:14,250 - absl - WARNING - There is a known slowdown when using v2.11+ Keras optimizers on M1/M2 Macs. Falling back to the legacy Keras optimizer, i.e., `tf.keras.optimizers.legacy.Adam`.
+2025-03-12 11:53:17,465 - rasa.utils.tensorflow.models - DEBUG - Finished loading the model.
+2025-03-12 11:53:17,466 - rasa.engine.graph - DEBUG - Node 'run_EntitySynonymMapper6' loading 'EntitySynonymMapper.load' and kwargs: '{}'.
+2025-03-12 11:53:17,466 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_EntitySynonymMapper6' was requested for reading.
+2025-03-12 11:53:17,466 - rasa.nlu.extractors.entity_synonyms - DEBUG - Failed to load ABCMeta from model storage. Resource 'train_EntitySynonymMapper6' doesn't exist.
+2025-03-12 11:53:17,466 - rasa.engine.graph - DEBUG - Node 'run_ResponseSelector7' loading 'ResponseSelector.load' and kwargs: '{}'.
+2025-03-12 11:53:17,466 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_ResponseSelector7' was requested for reading.
+2025-03-12 11:53:17,466 - rasa.nlu.classifiers.diet_classifier - DEBUG - Failed to load ABCMeta from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2025-03-12 11:53:17,466 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_ResponseSelector7' was requested for reading.
+2025-03-12 11:53:17,466 - rasa.nlu.selectors.response_selector - DEBUG - Failed to load ResponseSelector from model storage. Resource 'train_ResponseSelector7' doesn't exist.
+2025-03-12 11:53:17,466 - rasa.engine.graph - DEBUG - Node 'run_FallbackClassifier8' loading 'FallbackClassifier.load' and kwargs: '{}'.
+2025-03-12 11:53:17,466 - rasa.engine.graph - DEBUG - Node 'run_RegexMessageHandler' loading 'RegexMessageHandler.load' and kwargs: '{}'.
+2025-03-12 11:53:17,466 - rasa.engine.graph - DEBUG - Node 'domain_provider' loading 'DomainProvider.load' and kwargs: '{}'.
+2025-03-12 11:53:17,466 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'domain_provider' was requested for reading.
+2025-03-12 11:53:17,476 - rasa.engine.graph - DEBUG - Node 'run_MemoizationPolicy0' loading 'MemoizationPolicy.load' and kwargs: '{}'.
+2025-03-12 11:53:17,476 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_MemoizationPolicy0' was requested for reading.
+2025-03-12 11:53:17,476 - rasa.engine.graph - DEBUG - Node 'run_RulePolicy1' loading 'RulePolicy.load' and kwargs: '{}'.
+2025-03-12 11:53:17,476 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_RulePolicy1' was requested for reading.
+2025-03-12 11:53:17,476 - rasa.engine.graph - DEBUG - Node 'run_UnexpecTEDIntentPolicy2' loading 'UnexpecTEDIntentPolicy.load' and kwargs: '{}'.
+2025-03-12 11:53:17,476 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_UnexpecTEDIntentPolicy2' was requested for reading.
+2025-03-12 11:53:17,478 - rasa.utils.tensorflow.models - DEBUG - Loading the model from /var/folders/pc/dyv9zq6936jbxq9bdpfwj6fw0000gn/T/tmpsk8l8bvx/train_UnexpecTEDIntentPolicy2/unexpected_intent_policy.tf_model with finetune_mode=False...
+2025-03-12 11:53:17,506 - absl - WARNING - At this time, the v2.11+ optimizer `tf.keras.optimizers.Adam` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.Adam`.
+2025-03-12 11:53:17,507 - absl - WARNING - There is a known slowdown when using v2.11+ Keras optimizers on M1/M2 Macs. Falling back to the legacy Keras optimizer, i.e., `tf.keras.optimizers.legacy.Adam`.
+2025-03-12 11:53:20,829 - rasa.utils.tensorflow.models - DEBUG - Finished loading the model.
+2025-03-12 11:53:20,829 - rasa.shared.utils.common - WARNING - The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2025-03-12 11:53:20,829 - rasa.engine.graph - DEBUG - Node 'run_TEDPolicy3' loading 'TEDPolicy.load' and kwargs: '{}'.
+2025-03-12 11:53:20,829 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_TEDPolicy3' was requested for reading.
+2025-03-12 11:53:20,830 - rasa.utils.tensorflow.models - DEBUG - Loading the model from /var/folders/pc/dyv9zq6936jbxq9bdpfwj6fw0000gn/T/tmpsk8l8bvx/train_TEDPolicy3/ted_policy.tf_model with finetune_mode=False...
+2025-03-12 11:53:20,861 - absl - WARNING - At this time, the v2.11+ optimizer `tf.keras.optimizers.Adam` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.Adam`.
+2025-03-12 11:53:20,862 - absl - WARNING - There is a known slowdown when using v2.11+ Keras optimizers on M1/M2 Macs. Falling back to the legacy Keras optimizer, i.e., `tf.keras.optimizers.legacy.Adam`.
+2025-03-12 11:53:23,736 - rasa.utils.tensorflow.models - DEBUG - Finished loading the model.
+2025-03-12 11:53:23,736 - rasa.engine.graph - DEBUG - Node 'rule_only_data_provider' loading 'RuleOnlyDataProvider.load' and kwargs: '{}'.
+2025-03-12 11:53:23,736 - rasa.engine.storage.local_model_storage - DEBUG - Resource 'train_RulePolicy1' was requested for reading.
+2025-03-12 11:53:23,737 - rasa.engine.graph - DEBUG - Node 'select_prediction' loading 'DefaultPolicyPredictionEnsemble.load' and kwargs: '{}'.
+2025-03-12 11:53:23,741 - root - INFO - Rasa server is up and running.
+2025-03-12 11:53:23,742 - root - INFO - Enabling coroutine debugging. Loop id 13392377072.
+2025-03-12 11:53:32,461 - rasa.core.lock_store - DEBUG - Issuing ticket for conversation 'PractikumStudent'.
+2025-03-12 11:53:32,462 - rasa.core.lock_store - DEBUG - Acquiring lock for conversation 'PractikumStudent'.
+2025-03-12 11:53:32,462 - rasa.core.lock_store - DEBUG - Acquired lock for conversation 'PractikumStudent'.
+2025-03-12 11:53:32,462 - rasa.core.tracker_store - DEBUG - Could not find tracker for conversation ID 'PractikumStudent'.
+2025-03-12 11:53:32,462 - rasa.core.tracker_store - DEBUG - No event broker configured. Skipping streaming events.
+2025-03-12 11:53:32,462 - rasa.core.processor - DEBUG - Starting a new session for conversation ID 'PractikumStudent'.
+2025-03-12 11:53:32,463 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.actions.policy_prediction[0m [36mprediction_events[0m=[35m[][0m
+2025-03-12 11:53:32,463 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.actions.log         [0m [36maction_name[0m=[35maction_session_start[0m [36mrasa_events[0m=[35m[<rasa.shared.core.events.SessionStarted object at 0x389506340>, ActionExecuted(action: action_listen, policy: None, confidence: None)][0m
+2025-03-12 11:53:32,463 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.slots.log           [0m [36mslot_values[0m=[35m	topic: None
+	session_started_metadata: None[0m
+2025-03-12 11:53:32,463 - rasa.engine.runner.dask - DEBUG - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x3463488e0>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x3466c35e0>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='3c305ffef718403084f02164322d12be', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2025-03-12 11:53:32,464 - rasa.engine.graph - DEBUG - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2025-03-12 11:53:32,464 - rasa.engine.graph - DEBUG - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2025-03-12 11:53:32,465 - rasa.engine.graph - DEBUG - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2025-03-12 11:53:32,465 - rasa.engine.graph - DEBUG - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2025-03-12 11:53:32,465 - rasa.engine.graph - DEBUG - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2025-03-12 11:53:32,465 - rasa.engine.graph - DEBUG - Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2025-03-12 11:53:32,466 - rasa.engine.graph - DEBUG - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2025-03-12 11:53:32,569 - rasa.engine.graph - DEBUG - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2025-03-12 11:53:32,569 - rasa.engine.graph - DEBUG - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2025-03-12 11:53:32,569 - rasa.nlu.classifiers.diet_classifier - DEBUG - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2025-03-12 11:53:32,569 - rasa.nlu.selectors.response_selector - DEBUG - Adding following selector key to message property: default
+2025-03-12 11:53:32,569 - rasa.engine.graph - DEBUG - Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2025-03-12 11:53:32,570 - rasa.engine.graph - DEBUG - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2025-03-12 11:53:32,570 - rasa.engine.graph - DEBUG - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2025-03-12 11:53:32,570 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.message.parse       [0m [36mparse_data_entities[0m=[35m[][0m [36mparse_data_intent[0m=[35m{'name': 'greet', 'confidence': 0.9999986886978149}[0m [36mparse_data_text[0m=[35mПривет[0m
+2025-03-12 11:53:32,570 - rasa.core.processor - DEBUG - Logged UserUtterance - tracker now has 4 events.
+2025-03-12 11:53:32,571 - rasa.core.actions.action - DEBUG - Validating extracted slots: topic
+2025-03-12 11:53:32,571 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.extract.slots       [0m [36maction_extract_slot[0m=[35maction_extract_slots[0m [36mlen_extraction_events[0m=[35m1[0m [36mrasa_events[0m=[35m[SlotSet(key: topic, value: Привет)][0m
+2025-03-12 11:53:32,571 - rasa.engine.runner.dask - DEBUG - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x3466c35e0>}, targets: ['select_prediction'] and ExecutionContext(model_id='3c305ffef718403084f02164322d12be', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2025-03-12 11:53:32,572 - rasa.engine.graph - DEBUG - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2025-03-12 11:53:32,572 - rasa.engine.graph - DEBUG - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2025-03-12 11:53:32,572 - rasa.engine.graph - DEBUG - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2025-03-12 11:53:32,572 - rasa.core.policies.memoization - DEBUG - [[32m[1mdebug    [0m] [1mmemoization.predict.actions   [0m [36mtracker_states[0m=[35m[{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}][0m
+2025-03-12 11:53:32,572 - rasa.core.policies.memoization - DEBUG - There is a memorised next action 'utter_greet'
+2025-03-12 11:53:32,572 - rasa.engine.graph - DEBUG - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2025-03-12 11:53:32,572 - rasa.core.policies.rule_policy - DEBUG - [[32m[1mdebug    [0m] [1mrule_policy.actions.find      [0m [36mcurrent_states[0m=[35m
+[state 1] user text: Привет | previous action name: action_listen[0m
+2025-03-12 11:53:32,572 - rasa.core.policies.rule_policy - DEBUG - There is no applicable rule.
+2025-03-12 11:53:32,572 - rasa.core.policies.rule_policy - DEBUG - [[32m[1mdebug    [0m] [1mrule_policy.actions.find      [0m [36mcurrent_states[0m=[35m
+[state 1] user intent: greet | previous action name: action_listen[0m
+2025-03-12 11:53:32,572 - rasa.core.policies.rule_policy - DEBUG - There is a rule for the next action 'utter_greet'.
+2025-03-12 11:53:32,572 - rasa.engine.graph - DEBUG - Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2025-03-12 11:53:32,574 - rasa.core.policies.ted_policy - DEBUG - TED predicted 'utter_greet' based on user intent.
+2025-03-12 11:53:32,574 - rasa.engine.graph - DEBUG - Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2025-03-12 11:53:32,719 - rasa.core.policies.unexpected_intent_policy - DEBUG - Querying for intent `greet`.
+2025-03-12 11:53:32,719 - rasa.core.policies.unexpected_intent_policy - DEBUG - Score for intent `greet` is `2.136300563812256`, while threshold is `-1.4321138858795166`.
+2025-03-12 11:53:32,719 - rasa.core.policies.unexpected_intent_policy - DEBUG - Top 5 intents (in ascending order) that are likely here are: `[('nlu_fallback', -1.604511), ('deny', -1.5969601), ('goodbye', 1.947293), ('greet', 2.1363006), ('request_info', 2.6489646)]`.
+2025-03-12 11:53:32,719 - rasa.engine.graph - DEBUG - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2025-03-12 11:53:32,719 - rasa.core.policies.ensemble - DEBUG - Made prediction using user intent.
+2025-03-12 11:53:32,719 - rasa.core.policies.ensemble - DEBUG - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2025-03-12 11:53:32,719 - rasa.core.policies.ensemble - DEBUG - Predicted next action using RulePolicy.
+2025-03-12 11:53:32,719 - rasa.core.processor - DEBUG - Predicted next action 'utter_greet' with confidence 1.00.
+2025-03-12 11:53:32,720 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.actions.policy_prediction[0m [36mprediction_events[0m=[35m[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x389506a30>][0m
+2025-03-12 11:53:32,720 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.actions.log         [0m [36maction_name[0m=[35mutter_greet[0m [36mrasa_events[0m=[35m[BotUttered('Привет! Чем могу помочь в области архитектуры программного обеспечения?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_greet"}, 1741769612.720139)][0m
+2025-03-12 11:53:32,720 - rasa.engine.runner.dask - DEBUG - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x3466c35e0>}, targets: ['select_prediction'] and ExecutionContext(model_id='3c305ffef718403084f02164322d12be', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2025-03-12 11:53:32,720 - rasa.engine.graph - DEBUG - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2025-03-12 11:53:32,720 - rasa.engine.graph - DEBUG - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2025-03-12 11:53:32,720 - rasa.engine.graph - DEBUG - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2025-03-12 11:53:32,720 - rasa.core.policies.memoization - DEBUG - [[32m[1mdebug    [0m] [1mmemoization.predict.actions   [0m [36mtracker_states[0m=[35m[{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}][0m
+2025-03-12 11:53:32,720 - rasa.core.policies.memoization - DEBUG - There is a memorised next action 'action_listen'
+2025-03-12 11:53:32,720 - rasa.engine.graph - DEBUG - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2025-03-12 11:53:32,721 - rasa.core.policies.rule_policy - DEBUG - [[32m[1mdebug    [0m] [1mrule_policy.actions.find      [0m [36mcurrent_states[0m=[35m
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet[0m
+2025-03-12 11:53:32,721 - rasa.core.policies.rule_policy - DEBUG - There is a rule for the next action 'action_listen'.
+2025-03-12 11:53:32,721 - rasa.engine.graph - DEBUG - Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2025-03-12 11:53:32,722 - rasa.core.policies.ted_policy - DEBUG - TED predicted 'action_listen' based on user intent.
+2025-03-12 11:53:32,722 - rasa.engine.graph - DEBUG - Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2025-03-12 11:53:32,722 - rasa.core.policies.unexpected_intent_policy - DEBUG - Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2025-03-12 11:53:32,723 - rasa.engine.graph - DEBUG - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2025-03-12 11:53:32,723 - rasa.core.policies.ensemble - DEBUG - Predicted next action using RulePolicy.
+2025-03-12 11:53:32,723 - rasa.core.processor - DEBUG - Predicted next action 'action_listen' with confidence 1.00.
+2025-03-12 11:53:32,723 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.actions.policy_prediction[0m [36mprediction_events[0m=[35m[][0m
+2025-03-12 11:53:32,723 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.actions.log         [0m [36maction_name[0m=[35maction_listen[0m [36mrasa_events[0m=[35m[][0m
+2025-03-12 11:53:32,723 - rasa.core.tracker_store - DEBUG - No event broker configured. Skipping streaming events.
+2025-03-12 11:53:32,723 - rasa.core.lock_store - DEBUG - Deleted lock for conversation 'PractikumStudent'.
+2025-03-12 11:53:50,242 - rasa.core.lock_store - DEBUG - Issuing ticket for conversation 'PractikumStudent'.
+2025-03-12 11:53:50,242 - rasa.core.lock_store - DEBUG - Acquiring lock for conversation 'PractikumStudent'.
+2025-03-12 11:53:50,242 - rasa.core.lock_store - DEBUG - Acquired lock for conversation 'PractikumStudent'.
+2025-03-12 11:53:50,242 - rasa.core.tracker_store - DEBUG - Recreating tracker for id 'PractikumStudent'
+2025-03-12 11:53:50,244 - rasa.engine.runner.dask - DEBUG - Running graph with inputs: {'__message__': [<rasa.core.channels.channel.UserMessage object at 0x31e4d7d00>], '__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x37ee99430>}, targets: ['run_RegexMessageHandler'] and ExecutionContext(model_id='3c305ffef718403084f02164322d12be', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2025-03-12 11:53:50,245 - rasa.engine.graph - DEBUG - Node 'nlu_message_converter' running 'NLUMessageConverter.convert_user_message'.
+2025-03-12 11:53:50,245 - rasa.engine.graph - DEBUG - Node 'run_WhitespaceTokenizer0' running 'WhitespaceTokenizer.process'.
+2025-03-12 11:53:50,245 - rasa.engine.graph - DEBUG - Node 'run_RegexFeaturizer1' running 'RegexFeaturizer.process'.
+2025-03-12 11:53:50,245 - rasa.engine.graph - DEBUG - Node 'run_LexicalSyntacticFeaturizer2' running 'LexicalSyntacticFeaturizer.process'.
+2025-03-12 11:53:50,246 - rasa.engine.graph - DEBUG - Node 'run_CountVectorsFeaturizer3' running 'CountVectorsFeaturizer.process'.
+2025-03-12 11:53:50,247 - rasa.engine.graph - DEBUG - Node 'run_CountVectorsFeaturizer4' running 'CountVectorsFeaturizer.process'.
+2025-03-12 11:53:50,248 - rasa.engine.graph - DEBUG - Node 'run_DIETClassifier5' running 'DIETClassifier.process'.
+2025-03-12 11:53:50,258 - rasa.engine.graph - DEBUG - Node 'run_EntitySynonymMapper6' running 'EntitySynonymMapper.process'.
+2025-03-12 11:53:50,258 - rasa.engine.graph - DEBUG - Node 'run_ResponseSelector7' running 'ResponseSelector.process'.
+2025-03-12 11:53:50,258 - rasa.nlu.classifiers.diet_classifier - DEBUG - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2025-03-12 11:53:50,258 - rasa.nlu.selectors.response_selector - DEBUG - Adding following selector key to message property: default
+2025-03-12 11:53:50,259 - rasa.engine.graph - DEBUG - Node 'run_FallbackClassifier8' running 'FallbackClassifier.process'.
+2025-03-12 11:53:50,259 - rasa.engine.graph - DEBUG - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2025-03-12 11:53:50,259 - rasa.engine.graph - DEBUG - Node 'run_RegexMessageHandler' running 'RegexMessageHandler.process'.
+2025-03-12 11:53:50,259 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.message.parse       [0m [36mparse_data_entities[0m=[35m[][0m [36mparse_data_intent[0m=[35m{'name': 'ask_architecture', 'confidence': 0.9999160766601562}[0m [36mparse_data_text[0m=[35mРасскажи о последних тенденциях в области архитектуры[0m
+2025-03-12 11:53:50,260 - rasa.core.processor - DEBUG - Logged UserUtterance - tracker now has 10 events.
+2025-03-12 11:53:50,260 - rasa.core.actions.action - DEBUG - Validating extracted slots: topic
+2025-03-12 11:53:50,260 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.extract.slots       [0m [36maction_extract_slot[0m=[35maction_extract_slots[0m [36mlen_extraction_events[0m=[35m1[0m [36mrasa_events[0m=[35m[SlotSet(key: topic, value: Расскажи о последних тенденциях в области архитектуры)][0m
+2025-03-12 11:53:50,260 - rasa.engine.runner.dask - DEBUG - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x37ee99430>}, targets: ['select_prediction'] and ExecutionContext(model_id='3c305ffef718403084f02164322d12be', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2025-03-12 11:53:50,261 - rasa.engine.graph - DEBUG - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2025-03-12 11:53:50,261 - rasa.engine.graph - DEBUG - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2025-03-12 11:53:50,261 - rasa.engine.graph - DEBUG - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2025-03-12 11:53:50,262 - rasa.core.policies.memoization - DEBUG - [[32m[1mdebug    [0m] [1mmemoization.predict.actions   [0m [36mtracker_states[0m=[35m[{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'ask_architecture'}, 'prev_action': {'action_name': 'action_listen'}}][0m
+2025-03-12 11:53:50,262 - rasa.core.policies.memoization - DEBUG - There is a memorised next action 'utter_architecture_response'
+2025-03-12 11:53:50,262 - rasa.engine.graph - DEBUG - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2025-03-12 11:53:50,262 - rasa.core.policies.rule_policy - DEBUG - [[32m[1mdebug    [0m] [1mrule_policy.actions.find      [0m [36mcurrent_states[0m=[35m
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user text: Расскажи о последних тенденциях в области архитектуры | previous action name: action_listen[0m
+2025-03-12 11:53:50,262 - rasa.core.policies.rule_policy - DEBUG - There is no applicable rule.
+2025-03-12 11:53:50,263 - rasa.core.policies.rule_policy - DEBUG - [[32m[1mdebug    [0m] [1mrule_policy.actions.find      [0m [36mcurrent_states[0m=[35m
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_architecture | previous action name: action_listen[0m
+2025-03-12 11:53:50,263 - rasa.core.policies.rule_policy - DEBUG - There is a rule for the next action 'utter_architecture_response'.
+2025-03-12 11:53:50,263 - rasa.engine.graph - DEBUG - Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2025-03-12 11:53:50,268 - rasa.core.policies.ted_policy - DEBUG - TED predicted 'utter_architecture_response' based on user intent.
+2025-03-12 11:53:50,268 - rasa.engine.graph - DEBUG - Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2025-03-12 11:53:50,271 - rasa.core.policies.unexpected_intent_policy - DEBUG - Querying for intent `ask_architecture`.
+2025-03-12 11:53:50,271 - rasa.core.policies.unexpected_intent_policy - DEBUG - Score for intent `ask_architecture` is `1.841722846031189`, while threshold is `-1.9373741149902344`.
+2025-03-12 11:53:50,271 - rasa.core.policies.unexpected_intent_policy - DEBUG - Top 5 intents (in ascending order) that are likely here are: `[('goodbye', -1.8217282), ('back', -1.6301563), ('inform', -1.5536883), ('greet', -1.4321141), ('ask_architecture', 1.8417228)]`.
+2025-03-12 11:53:50,272 - rasa.engine.graph - DEBUG - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2025-03-12 11:53:50,272 - rasa.core.policies.ensemble - DEBUG - Made prediction using user intent.
+2025-03-12 11:53:50,272 - rasa.core.policies.ensemble - DEBUG - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2025-03-12 11:53:50,272 - rasa.core.policies.ensemble - DEBUG - Predicted next action using RulePolicy.
+2025-03-12 11:53:50,272 - rasa.core.processor - DEBUG - Predicted next action 'utter_architecture_response' with confidence 1.00.
+2025-03-12 11:53:50,272 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.actions.policy_prediction[0m [36mprediction_events[0m=[35m[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x389506f40>][0m
+2025-03-12 11:53:50,272 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.actions.log         [0m [36maction_name[0m=[35mutter_architecture_response[0m [36mrasa_events[0m=[35m[BotUttered('Архитектура ПО включает выбор структур, которые обеспечивают масштабируемость, гибкость и поддерживаемость приложения. Задайте конкретный вопрос по этой теме, и я помогу вам с информацией.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_architecture_response"}, 1741769630.272678)][0m
+2025-03-12 11:53:50,273 - rasa.engine.runner.dask - DEBUG - Running graph with inputs: {'__tracker__': <rasa.shared.core.trackers.DialogueStateTracker object at 0x37ee99430>}, targets: ['select_prediction'] and ExecutionContext(model_id='3c305ffef718403084f02164322d12be', should_add_diagnostic_data=False, is_finetuning=False, node_name=None).
+2025-03-12 11:53:50,273 - rasa.engine.graph - DEBUG - Node 'rule_only_data_provider' running 'RuleOnlyDataProvider.provide'.
+2025-03-12 11:53:50,273 - rasa.engine.graph - DEBUG - Node 'domain_provider' running 'DomainProvider.provide_inference'.
+2025-03-12 11:53:50,273 - rasa.engine.graph - DEBUG - Node 'run_MemoizationPolicy0' running 'MemoizationPolicy.predict_action_probabilities'.
+2025-03-12 11:53:50,274 - rasa.core.policies.memoization - DEBUG - [[32m[1mdebug    [0m] [1mmemoization.predict.actions   [0m [36mtracker_states[0m=[35m[{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'ask_architecture'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'ask_architecture'}, 'prev_action': {'action_name': 'utter_architecture_response'}}][0m
+2025-03-12 11:53:50,274 - rasa.core.policies.memoization - DEBUG - There is a memorised next action 'action_listen'
+2025-03-12 11:53:50,274 - rasa.engine.graph - DEBUG - Node 'run_RulePolicy1' running 'RulePolicy.predict_action_probabilities'.
+2025-03-12 11:53:50,274 - rasa.core.policies.rule_policy - DEBUG - [[32m[1mdebug    [0m] [1mrule_policy.actions.find      [0m [36mcurrent_states[0m=[35m
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: ask_architecture | previous action name: action_listen
+[state 4] user intent: ask_architecture | previous action name: utter_architecture_response[0m
+2025-03-12 11:53:50,274 - rasa.core.policies.rule_policy - DEBUG - There is a rule for the next action 'action_listen'.
+2025-03-12 11:53:50,274 - rasa.engine.graph - DEBUG - Node 'run_TEDPolicy3' running 'TEDPolicy.predict_action_probabilities'.
+2025-03-12 11:53:50,277 - rasa.core.policies.ted_policy - DEBUG - TED predicted 'action_listen' based on user intent.
+2025-03-12 11:53:50,278 - rasa.engine.graph - DEBUG - Node 'run_UnexpecTEDIntentPolicy2' running 'UnexpecTEDIntentPolicy.predict_action_probabilities'.
+2025-03-12 11:53:50,278 - rasa.core.policies.unexpected_intent_policy - DEBUG - Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2025-03-12 11:53:50,278 - rasa.engine.graph - DEBUG - Node 'select_prediction' running 'DefaultPolicyPredictionEnsemble.combine_predictions_from_kwargs'.
+2025-03-12 11:53:50,278 - rasa.core.policies.ensemble - DEBUG - Predicted next action using RulePolicy.
+2025-03-12 11:53:50,278 - rasa.core.processor - DEBUG - Predicted next action 'action_listen' with confidence 1.00.
+2025-03-12 11:53:50,278 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.actions.policy_prediction[0m [36mprediction_events[0m=[35m[][0m
+2025-03-12 11:53:50,278 - rasa.core.processor - DEBUG - [[32m[1mdebug    [0m] [1mprocessor.actions.log         [0m [36maction_name[0m=[35maction_listen[0m [36mrasa_events[0m=[35m[][0m
+2025-03-12 11:53:50,278 - rasa.core.tracker_store - DEBUG - No event broker configured. Skipping streaming events.
+2025-03-12 11:53:50,279 - rasa.core.lock_store - DEBUG - Deleted lock for conversation 'PractikumStudent'.
