@@ -3,4 +3,6 @@
 
 Фаил с настройками логирования logging.yml
 
+![Логи](rasa/rasa_debug.log)
+
 ![UI](image.png)
